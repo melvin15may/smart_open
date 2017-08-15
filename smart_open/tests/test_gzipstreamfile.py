@@ -7,6 +7,11 @@ import io
 import mock
 import zlib
 
+if sys.version_info < (2, 7):
+    import unittest2 as unittest
+else:
+    import unittest as unittest
+
 logger = logging.getLogger(__name__)
 
 CURR_DIR = P.abspath(P.dirname(__file__))

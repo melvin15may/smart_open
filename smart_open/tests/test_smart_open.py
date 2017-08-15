@@ -6,8 +6,6 @@
 # This code is distributed under the terms and conditions
 # from the MIT License (MIT).
 
-
-import unittest
 import logging
 import tempfile
 import sys
@@ -22,6 +20,11 @@ from ssl import SSLError
 
 import smart_open
 from smart_open import smart_open_lib
+
+if sys.version_info < (2, 7):
+    import unittest2 as unittest
+else:
+    import unittest as unittest
 
 logger = logging.getLogger(__name__)
 
