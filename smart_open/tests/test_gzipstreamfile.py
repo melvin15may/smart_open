@@ -1,5 +1,4 @@
 import smart_open.gzipstreamfile
-import unittest
 import os.path as P
 import hashlib
 import logging
